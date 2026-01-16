@@ -1,0 +1,6 @@
+[
+  { "customerId": "C1", "transactionId": "T1", "amount": 120, "date": "2025-01-10" },
+  { "customerId": "C1", "transactionId": "T2", "amount": 75, "date": "2025-02-12" },
+  { "customerId": "C2", "transactionId": "T3", "amount": 200, "date": "2025-03-15" },
+  { "customerId": "C3", "transactionId": "T4", "amount": 45, "date": "2024-12-20" }
+]
