@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { fetchTransactions } from "./services/transactionService";
 import CustomerList from "./components/CustomerList/CustomerList";
 import Filters from "./components/Filters/Filters";
 import TransactionTable from "./components/TransactionTable/TransactionTable";
+import { fetchTransactions } from "./services/transactionService";
+import { Page, Card, Title, Row } from "./components/Layout";
 
 function App() {
   const [data, setData] = useState([]);
@@ -11,7 +12,12 @@ function App() {
   const [year, setYear] = useState(2025);
 
   useEffect(() => {
-    fetchTransactions().then(setData);
+    fetchTransactions().then((res) => {
+      setData(res);
+      if (res.length > 0) {
+        setCustomer(res[0].customerId); // default customer
+      }
+    });
   }, []);
 
   const customers = [...new Set(data.map(d => d.customerId))];
@@ -21,17 +27,35 @@ function App() {
     return (
       d.customerId === customer &&
       date.getMonth() === month &&
-      date.getFullYear() === Number(year)
+      date.getFullYear() === year
     );
   });
 
   return (
-    <div>
-      <h2>Rewards Program</h2>
-      <CustomerList customers={customers} onSelect={setCustomer} />
-      <Filters month={month} year={year} onMonth={setMonth} onYear={setYear} />
-      <TransactionTable transactions={filtered} />
-    </div>
+    <Page>
+      <Title>Customer Rewards Program</Title>
+
+      <Card>
+        <Row>
+          <CustomerList
+            customers={customers}
+            selectedCustomer={customer}
+            onSelect={setCustomer}
+          />
+          <Filters
+            month={month}
+            year={year}
+            onMonth={setMonth}
+            onYear={setYear}
+          />
+        </Row>
+      </Card>
+
+      <Card>
+        <Title>Transactions</Title>
+        <TransactionTable transactions={filtered} />
+      </Card>
+    </Page>
   );
 }
 

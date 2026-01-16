@@ -1,6 +1,24 @@
 [
-  { "customerId": "C1", "transactionId": "T1", "amount": 120, "date": "2025-01-10" },
-  { "customerId": "C1", "transactionId": "T2", "amount": 75, "date": "2025-02-12" },
-  { "customerId": "C2", "transactionId": "T3", "amount": 200, "date": "2025-03-15" },
-  { "customerId": "C3", "transactionId": "T4", "amount": 45, "date": "2024-12-20" }
+  { "customerId": "C1", "transactionId": "T1001", "amount": 120.75, "date": "2025-01-15" },
+  { "customerId": "C1", "transactionId": "T1002", "amount": 75.50,  "date": "2025-02-10" },
+  { "customerId": "C1", "transactionId": "T1003", "amount": 45.00,  "date": "2025-03-05" },
+
+  { "customerId": "C2", "transactionId": "T2001", "amount": 200.00, "date": "2025-01-20" },
+  { "customerId": "C2", "transactionId": "T2002", "amount": 95.25,  "date": "2025-02-18" },
+  { "customerId": "C2", "transactionId": "T2003", "amount": 60.00,  "date": "2025-03-12" },
+
+  { "customerId": "C3", "transactionId": "T3001", "amount": 130.00, "date": "2024-12-22" },
+  { "customerId": "C3", "transactionId": "T3002", "amount": 85.75,  "date": "2025-01-08" },
+  { "customerId": "C3", "transactionId": "T3003", "amount": 55.00,  "date": "2025-02-14" },
+
+  { "customerId": "C4", "transactionId": "T4001", "amount": 160.40, "date": "2024-11-10" },
+  { "customerId": "C4", "transactionId": "T4002", "amount": 70.00,  "date": "2025-01-25" },
+
+  { "customerId": "C5", "transactionId": "T5001", "amount": 90.00,  "date": "2023-06-15" },
+
+  { "customerId": "C6", "transactionId": "T6001", "amount": 110.00, "date": "2022-08-20" },
+
+  { "customerId": "C7", "transactionId": "T7001", "amount": 250.99, "date": "2021-03-30" },
+
+  { "customerId": "C8", "transactionId": "T8001", "amount": 55.00,  "date": "2025-02-28" }
 ]
