@@ -37,7 +37,7 @@ const TransactionTable = ({ transactions }) => {
         <tr>
           <Th>Transaction ID</Th>
           <Th>Date</Th>
-          <Th>Amount ($)</Th>
+          <Th>Amount </Th>
           <Th>Reward Points</Th>
         </tr>
       </thead>
